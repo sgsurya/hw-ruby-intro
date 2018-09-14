@@ -2,10 +2,12 @@
 
 # Part 1
 
+# Sum of the entire array
 def sum arr
   arr.reduce(0, :+)
 end
 
+# Find the sum of maximum 2 elements in the array
 def max_2_sum arr
   if arr.length == 0 then
     return 0
@@ -16,6 +18,7 @@ def max_2_sum arr
   end
 end
 
+# Check if two array elements sum to n
 def sum_to_n? arr, n
   hash = Hash.new()
   for x in arr
@@ -29,14 +32,17 @@ end
 
 # Part 2
 
+# Print hello concatenated with name
 def hello(name)
   return "Hello, " << name
 end
 
+# Check if string s starts with consonant
 def starts_with_consonant? s
   return /^[^aeiou\d\W]/i =~ s
 end
 
+# Check if given string s is a binary multiple of 4
 def binary_multiple_of_4? s
   if s =~ /^[01]+$/ then
     return s.to_i(2) % 4 == 0
